@@ -69,7 +69,7 @@ RegisterCommand("-sirenModeHold", () => {
   ent.set("sirenMode", 0, true);
 }, false);
 
-RegisterKeyMapping("+sirenModeHold", "Hold this button to sound your emergency vehicle's siren", "keyboard", "R");
+RegisterKeyMapping("+sirenModeHold", "(按住) 短笛", "keyboard", "R");
 
 RegisterCommand("sirenSoundToggle", () => {
   const ped: number = PlayerPedId();
@@ -95,7 +95,7 @@ RegisterCommand("sirenSoundToggle", () => {
   ent.set("sirenMode", newSirenMode, true);
 }, false);
 
-RegisterKeyMapping("sirenSoundToggle", "Toggle your emergency vehicle's siren sounds whilst your siren light is on", "keyboard", "COMMA");
+RegisterKeyMapping("sirenSoundToggle", "(切換) 分段式警笛聲", "keyboard", "LMENU");
 
 RegisterCommand("sirenSoundOff", () => {
   const ped: number = PlayerPedId();
@@ -111,7 +111,7 @@ RegisterCommand("sirenSoundOff", () => {
   ent.set("sirenMode", 0, true);
 }, false);
 
-RegisterKeyMapping("sirenSoundOff", "Turn off your sirens after being toggled", "keyboard", "PERIOD");
+RegisterKeyMapping("sirenSoundOff", "關閉警笛", "keyboard", "PERIOD");
 
 RegisterCommand("+emergencyHornHold", () => {
   const ped: number = PlayerPedId();
@@ -141,7 +141,7 @@ RegisterCommand("-emergencyHornHold", () => {
   restoreSiren = 0;
 }, false);
 
-RegisterKeyMapping("+emergencyHornHold", "Hold this button to sound your emergency vehicle's horn", "keyboard", "E");
+RegisterKeyMapping("+emergencyHornHold", "(按住) 喇叭", "keyboard", "E");
 
 RegisterCommand("sirenSound2Toggle", () => {
   const ped: number = PlayerPedId();
@@ -154,7 +154,7 @@ RegisterCommand("sirenSound2Toggle", () => {
   ent.set("siren2On", !ent.siren2On, true);
 }, false);
 
-RegisterKeyMapping("sirenSound2Toggle", "Toggle your emergency vehicle's second siren sound", "keyboard", "UP");
+RegisterKeyMapping("sirenSound2Toggle", "(切換) 無分段警笛聲", "keyboard", "");
 
 RegisterCommand("sirenLightsToggle", () => {
   const ped: number = PlayerPedId();
@@ -175,7 +175,7 @@ RegisterCommand("sirenLightsToggle", () => {
   ent.set("sirenMode", 0, true);
 }, false);
 
-RegisterKeyMapping("sirenLightsToggle", "Toggle your emergency vehicle's siren lights", "keyboard", "Q");
+RegisterKeyMapping("sirenLightsToggle", "開啟警燈", "keyboard", "Q");
 
 stateBagWrapper("horn", (ent: number, value: boolean) => {
   const relHornId: number | undefined = curHornSound.get(ent);
