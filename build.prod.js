@@ -1,11 +1,11 @@
-const { build } = require('esbuild');
+import { build } from 'esbuild';
 
 build({
-  entryPoints: ['./client/main.ts'],
-  outfile: './dist/client/main.js',
-  target: "es2020",
-  minify: true,
-  bundle: true
+	entryPoints: ['./client/main.ts'],
+	outfile: './dist/client/main.js',
+	target: "es2020",
+	minify: false,
+	bundle: true
 }).catch(() => process.exit(1));
 
 build({
@@ -13,6 +13,6 @@ build({
 	outfile: './dist/server/main.js',
 	platform: "node",
 	target: "es2020",
-	minify: true,
+	minify: false,
 	bundle: true
 }).catch(() => process.exit(1));

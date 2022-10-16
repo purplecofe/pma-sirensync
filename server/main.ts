@@ -9,8 +9,9 @@ onNet("pma-sirensync:ensureStateBag", (vehNet: number) => {
 
 	ent.stateEnsured = true;
 	ent.sirenMode = 0;
+	ent.siren2Mode = 0;
 	ent.horn = false;
 	ent.lightsOn = false;
 	ent.siren2On = false;
 	ent.sirenOn = false;
-})
+});
